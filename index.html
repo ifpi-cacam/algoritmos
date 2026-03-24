@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Index of /aulas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: monospace;
+      background: #fff;
+      color: #000;
+      margin: 40px;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: normal;
+    }
+
+    a {
+      text-decoration: none;
+      color: #00f;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    hr {
+      margin: 15px 0;
+    }
+
+    /* Aula */
+    .aula {
+      margin-top: 10px;
+    }
+
+    .aula-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 5px 0;
+    }
+
+    .aula-header:hover {
+      background: #f5f5f5;
+    }
+
+    .titulo::before {
+      content: "📁 ";
+    }
+
+    .data {
+      font-size: 12px;
+      color: #555;
+      margin-left: 10px;
+    }
+
+    .btn-toggle {
+      font-family: monospace;
+      font-size: 12px;
+      border: 1px solid #000;
+      background: none;
+      cursor: pointer;
+      padding: 2px 6px;
+    }
+
+    /* Slide-down VISÍVEL */
+    .arquivos {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease-in-out;
+      margin-left: 20px;
+      border-left: 1px dashed #ccc;
+      padding-left: 10px;
+    }
+
+    .arquivos.ativo {
+      margin-top: 8px;
+    }
+
+    /* Cabeçalho estilo Apache */
+    .file-header {
+      margin-top: 10px;
+      font-size: 12px;
+      display: grid;
+      grid-template-columns: 1fr 150px 80px;
+      font-weight: bold;
+    }
+
+    .file-item {
+      display: grid;
+      grid-template-columns: 1fr 150px 80px;
+      font-size: 12px;
+      margin: 3px 0;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #555;
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
+      .file-header,
+      .file-item {
+        grid-template-columns: 1fr;
+      }
+
+      .aula-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .btn-toggle {
+        margin-top: 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Index of /aulas</h1>
+  <hr>
+
+  <!-- 🔹 AULA 1 -->
+  <div class="aula">
+    <div class="aula-header" onclick="toggleAula(this)">
+      <div>
+        <span class="titulo">Aula 01 - Apresentação da Disciplina e Motivação</span>
+        <span class="data">19/03/2026</span>
+      </div>
+      <button class="btn-toggle">[ arquivos ]</button>
+    </div>
+
+    <div class="arquivos">
+      <div class="file-header">
+        <span>Name</span>
+        <span>Last modified</span>
+        <span>Size</span>
+      </div>
+
+      <div class="file-item">
+        <span>📄 <a href="aula01/Motivacional_ Algoritmos_e_Sist_Computacionais_19_03_2026.pdf">Motivacional_ Algoritmos_e_Sist_Computacionais_19_03_2026.pdf</a></span>
+        <span>20-Mar-2026</span>
+        <span>5.4M</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 🔹 AULA 2 -->
+  <div class="aula">
+    <div class="aula-header" onclick="toggleAula(this)">
+      <div>
+        <span class="titulo">Aula 02 - Resolução de Problemas com Algoritmos e Introdução a pseudolinguagem</span>
+        <span class="data">20/03/2026</span>
+      </div>
+      <button class="btn-toggle">[ arquivos ]</button>
+    </div>
+
+    <div class="arquivos">
+      <div class="file-header">
+        <span>Name</span>
+        <span>Last modified</span>
+        <span>Size</span>
+      </div>
+
+      <div class="file-item">
+        <span>📄 <a href="aula02/Livro_conceitos_iniciais_algoritmos_Manzano_2005_17Ed.pdf" target="_blank">Livro_conceitos_iniciais_algoritmos_Manzano_2005_17Ed.pdf</a></span>
+        <span>20-Mar-2026</span>
+        <span>25.9M</span>
+      </div>
+	  
+	 <div class="file-item">
+        <span>📄 <a href="https://portugol.dev" target="_blank">portugol.dev</a></span>
+        <span>-</span>
+        <span>-</span>
+      </div>
+	  
+	 <div class="file-item">
+        <span>📄 <a href="https://code.visualstudio.com/download" target="_blank">download MS vs code</a></span>
+        <span>-</span>
+        <span>-</span>
+      </div>
+
+	 <div class="file-item">
+        <span>📄 <a href="https://www.python.org/downloads/" target="_blank">download python</a></span>
+        <span>-</span>
+        <span>-</span>
+      </div>
+	  
+
+	 <div class="file-item">
+        <span>📄 <a href="aula02/VisualG_software_win_x86-x64-download.7z" target="_blank">VisualG_software_win_x86-x64-download.7z</a></span>
+        <span>20-Mar-2026</span>
+        <span>782K</span>
+      </div>
+	  
+
+	 <div class="file-item">
+        <span>📄 <a href="aula02/Manual_basico_Linguagem_Visualg2.0.pdf" target="_blank">Manual_basico_Linguagem_Visualg2.0.pdf</a></span>
+        <span>20-Mar-2026</span>
+        <span>446K</span>
+      </div>
+
+
+	 <div class="file-item">
+        <span>📄 <a href="aula02/Algoritmos_e_Programacao_2026-1__Primeira_Lista_Exercicios.pdf" target="_blank">Algoritmos_e_Programacao_2026-1__Primeira_Lista_Exercicios.pdf</a></span>
+        <span>20-Mar-2026</span>
+        <span>169K</span>
+      </div>
+	  
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- 🔻 FOOTER -->
+  <div class="footer" id="server-info"></div>
+
+  <script>
+    function toggleAula(element) {
+      const arquivos = element.nextElementSibling;
+
+      if (arquivos.style.maxHeight) {
+        arquivos.style.maxHeight = null;
+        arquivos.classList.remove("ativo");
+      } else {
+        arquivos.style.maxHeight = arquivos.scrollHeight + "px";
+        arquivos.classList.add("ativo");
+      }
+    }
+
+    function getServerInfo() {
+      const host = window.location.hostname;
+      const path = window.location.pathname;
+      const lastModified = document.lastModified;
+
+      return `
+        Apache/2.4.41 (Unix) Server at ${host} Port 80<br>
+        Directory: ${path}<br>
+        Last modified: ${lastModified}
+      `;
+    }
+
+    document.getElementById("server-info").innerHTML = getServerInfo();
+  </script>
+
+</body>
+</html>
