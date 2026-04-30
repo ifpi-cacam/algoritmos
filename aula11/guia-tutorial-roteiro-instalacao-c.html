@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Instalação GCC/MinGW no Windows + VS Code</title>
+<style>
+:root{--bg:#f7f9fc;--card:#ffffff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;--primary:#0f766e;--soft:#ecfeff}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+header{background:#0b1320;color:#fff;padding:28px 20px} header h1{margin:0;font-size:28px} header p{margin:8px 0 0;color:#cbd5e1}
+.container{max-width:1050px;margin:0 auto;padding:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:20px;box-shadow:0 8px 20px rgba(0,0,0,.04)}
+h2{margin-top:0;color:var(--primary)} h3{margin-bottom:8px}
+code,.code{font-family:Consolas,monospace;background:#111827;color:#e5e7eb;padding:2px 6px;border-radius:6px}
+pre{background:#111827;color:#e5e7eb;padding:16px;border-radius:12px;overflow:auto;font-size:14px}
+ul,ol{padding-left:22px}.muted{color:var(--muted)}
+.step{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start;margin:14px 0}.num{width:42px;height:42px;border-radius:50%;background:var(--soft);color:var(--primary);display:flex;align-items:center;justify-content:center;font-weight:bold;border:1px solid #bae6fd}
+.note{border-left:4px solid var(--primary);padding:10px 14px;background:#f0fdfa;border-radius:8px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:900px){.grid{grid-template-columns:1fr}}
+a{color:var(--primary);text-decoration:none} a:hover{text-decoration:underline}
+footer{padding:30px 20px;color:var(--muted);text-align:center}
+</style>
+</head>
+<body>
+<header>
+<h1 style="text-align:center;">Instalação do Ambiente GCC/MinGW no Windows + VS Code</h1>
+<p style="text-align:center;">Tutorial limpo e direto para configurar C no Windows usando GCC, GDB e Visual Studio Code.</p>
+</header>
+<div class="container">
+
+<section class="card">
+<h2>Visão Geral</h2>
+<p>Você irá configurar:</p>
+<ul>
+<li>Compilador <strong>gcc</strong> (linguagem C)</li>
+<li>Depurador <strong>gdb</strong></li>
+<li>Variável de ambiente <strong>PATH</strong></li>
+<li>Extensões do VS Code</li>
+<li>Arquivos <code>.vscode/tasks.json</code> e <code>.vscode/launch.json</code></li>
+</ul>
+</section>
+
+<section class="card">
+<h2>1. Download do GCC / MinGW (WinLibs)</h2>
+<div class="step"><div class="num">1</div><div>Acesse o link de download informado (download inicia automaticamente):<br><a href="https://sourceforge.net/projects/winlibs-mingw/files/latest/download" target="_blank">WinLibs MinGW - Download</a></div></div>
+<div class="step"><div class="num">2</div><div>Baixe o arquivo compactado (.zip ou .7z).</div></div>
+<div class="step"><div class="num">3</div><div>Descompacte o conteúdo em <code>C:\mingw32</code> (ou <code>C:\mingw</code>).</div></div>
+<div class="step"><div class="num">4</div><div>Confirme se existe a pasta:<br><code>C:\mingw32\bin</code></div></div>
+<div class="note">Dentro de <code>bin</code> devem existir arquivos como <code>gcc.exe</code>, <code>g++.exe</code>, <code>gdb.exe</code>.</div>
+</section>
+
+<section class="card">
+<h2>2. Configurar Variável de Ambiente PATH</h2>
+<ol>
+<li>Pressione <strong>Win + R</strong></li>
+<li>Digite <code>sysdm.cpl</code></li>
+<li>Aba <strong>Avançado</strong> → <strong>Variáveis de Ambiente</strong></li>
+<li>Em <strong>Path</strong>, clique em <strong>Editar</strong></li>
+<li>Adicionar:</li>
+</ol>
+<pre>C:\mingw32\bin</pre>
+<p>Feche e abra o terminal novamente.</p>
+<h3>Teste no Prompt / PowerShell</h3>
+<pre>gcc --version
+gdb --version</pre>
+</section>
+
+<section class="card">
+<h2>3. Instalar Visual Studio Code</h2>
+<p>Baixe e instale o VS Code.</p>
+<p>Depois abra o VS Code e instale as extensões:</p>
+<ul>
+<li><strong>C/C++ Extension Pack</strong> (Microsoft)</li>
+<li><strong>C/C++ DevTools</strong> (Microsoft)</li>
+</ul>
+<p>Link oficial da extensão:</p>
+<p><a href="https://github.com/microsoft/vscode-cpptools" target="_blank">https://github.com/microsoft/vscode-cpptools</a></p>
+</section>
+
+<section class="card">
+<h2>4. Criar Projeto</h2>
+<div class="step"><div class="num">1</div><div>No VS Code clique em <strong>File → Open Folder</strong></div></div>
+<div class="step"><div class="num">2</div><div>Crie uma pasta, exemplo:<br><code>D:\Projetos\C</code></div></div>
+<div class="step"><div class="num">3</div><div>Dentro dela crie a pasta <code>.vscode</code></div></div>
+<div class="step"><div class="num">4</div><div>Dentro de <code>.vscode</code> crie os arquivos:<br><code>tasks.json</code> e <code>launch.json</code></div></div>
+</section>
+
+<section class="card grid">
+<div>
+<h2>5. tasks.json</h2>
+<pre>{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build C",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-g",
+        "-Wall",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "presentation": {
+        "echo": false,
+        "reveal": "never",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": false,
+        "close": true
+      }
+    }
+  ]
+}</pre>
+</div>
+<div>
+<h2>6. launch.json</h2>
+<pre>{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug C (MinGW)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:/mingw32/bin/gdb.exe",
+      "preLaunchTask": "build C"
+    }
+  ]
+}</pre>
+</div>
+</section>
+
+<section class="card">
+<h2>7. Primeiro Programa</h2>
+<p>Crie <code>main.c</code>:</p>
+<pre>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main(){
+    printf("Ola, mundo!\n");
+    return EXIT_SUCCESS;
+}</pre>
+<p><strong>F5</strong> para compilar e depurar.</p>
+<p><mark><strong>Ctrl + F5</strong> para executar sem depuração.</p></mark>
+</section>
+
+<section class="card">
+<h2>8. Alternativa Simples</h2>
+<p>Instalar <strong>Code::Blocks</strong>, que já acompanha um subconjunto do GCC para Windows.</p>
+<p>Depois também é possível apontar o VS Code para essa instalação.</p>
+</section>
+
+<section class="card">
+<h2>9. Problemas Comuns</h2>
+<ul>
+<li><strong>gcc não reconhecido:</strong> PATH não configurado.</li>
+<li><strong>gdb não conecta:</strong> caminho errado em <code>miDebuggerPath</code>.</li>
+<li><strong>Antivírus bloqueando:</strong> adicionar exceção para pasta do compilador.</li>
+<li><strong>F5 só compila:</strong> revisar <code>launch.json</code>.</li>
+</ul>
+</section>
+
+</div>
+<footer>Nairon S Viana (nairon.viana@ifpi.edu.br). Material introdutório para aulas de Algoritmos e Linguagem C.</footer>
+</body>
+</html>
