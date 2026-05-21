@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>10 Questões de C com Resolução</title>
+
+<style>
+:root{
+--bg:#f7f9fc;
+--card:#ffffff;
+--text:#1f2937;
+--muted:#6b7280;
+--line:#e5e7eb;
+--primary:#0f766e;
+--soft:#ecfeff;
+}
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.6;
+}
+
+header{
+background:#0b1320;
+color:#fff;
+padding:28px 20px;
+}
+
+header h1{
+margin:0;
+font-size:28px;
+text-align:center;
+}
+
+header p{
+margin:8px 0 0;
+color:#cbd5e1;
+text-align:center;
+}
+
+.container{
+max-width:1050px;
+margin:0 auto;
+padding:24px;
+}
+
+.card{
+background:#fff;
+border:1px solid var(--line);
+border-radius:14px;
+padding:22px;
+margin-bottom:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.04);
+}
+
+h2{
+margin-top:0;
+color:var(--primary);
+}
+
+pre{
+background:#111827;
+color:#e5e7eb;
+padding:16px;
+border-radius:12px;
+overflow:auto;
+font-size:14px;
+}
+
+.step{
+display:grid;
+grid-template-columns:42px 1fr;
+gap:14px;
+align-items:start;
+margin:14px 0;
+}
+
+.num{
+width:42px;
+height:42px;
+border-radius:50%;
+background:var(--soft);
+color:var(--primary);
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+border:1px solid #bae6fd;
+}
+
+footer{
+padding:30px 20px;
+color:#6b7280;
+text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>10 Questões de Linguagem C com Resolução</h1>
+<p>Entrada e saída, variáveis e estruturas de decisão.</p>
+</header>
+
+<div class="container">
+
+<section class="card">
+<h2>Questão 1</h2>
+<div class="step">
+<div class="num">1</div>
+<div>Leia o nome de uma pessoa e mostre: Olá, NOME!</div>
+</div>
+
+<pre>#include &lt;stdio.h&gt;
+
+int main(){
+
+   char nome[30];
+
+   scanf(" %29[^\n]", nome);
+
+   printf("Olá, %s!", nome);
+
+}</pre>
+</section>
+
+<section class="card">
+<h2>Questão 2</h2>
+<div class="step">
+<div class="num">2</div>
+<div>Leia um número inteiro e mostre o dobro e triplo.</div>
+</div>
+
+<pre>#include &lt;stdio.h&gt;
+
+int main(){
+
+   int n;
+
+   scanf("%d", &amp;n);
+
+   printf("Dobro: %d\nTriplo: %d", n*2, n*3);
+
+}</pre>
+</section>
+
+<section class="card">
+<h2>Questão 3</h2>
+<div class="step">
+<div class="num">3</div>
+<div>Leia dois números reais e mostre a média.</div>
+</div>
+
+<pre>#include &lt;stdio.h&gt;
+
+int main(){
+
+   float a,b;
+
+   scanf("%f%f", &amp;a, &amp;b);
+
+   printf("Média: %.2f", (a+b)/2);
+
+}</pre>
+</section>
+
+<section class="card">
+<h2>Questão 4</h2>
+<div class="step">
+<div class="num">4</div>
+<div>Leia nome, idade e salário e exiba os dados.</div>
+</div>
+
+<pre>#include &lt;stdio.h&gt;
+
+int main(){
+
+   char nome[30];
+   int idade;
+   float salario;
+
+   scanf(" %29[^\n]", nome);
+   scanf("%d", &amp;idade);
+   scanf("%f", &amp;salario);
+
+   printf("Nome: %s\nIdade: %d\nSalário: %.2f", nome, idade, salario);
+
+}</pre>
+</section>
+
+<section class="card">
+<h2>Questão 5</h2>
+<div class="step">
+<div class="num">5</div>
+<div>Leia sexo (M/F) e exiba.</div>
+</div>
+
+<pre>#include &lt;stdio.h&gt;
+
+int main(){
+
+   char sexo;
+
+   scanf(" %c", &amp;sexo);
+
+   printf("Sexo: %c", sexo);
+
+}</pre>
+</section>
+
+<section class="card">
+<h2>Questão 6</h2>
+<div class="step">
+<div class="num">6</div>
+<div>Leia uma palavra e mostre quantidade de caracteres.</div>
+</div>
+
+<pre>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main(){
+
+   char nome[30];
+
+   scanf("%s", nome);
+
+   printf("Total: %d", strlen(nome));
+
+}</pre>
+</section>
+
+<section class="card">
+<h2>Questão 7</h2>
+<div class="step">
+<div class="num">7</div>
+<div>Leia idade, altura e inicial do nome.</div>
+</div>
+
+<pre>#include &lt;stdio.h&gt;
+
+int main(){
+
+   int idade;
+   float altura;
+   char inicial;
+
+   scanf("%d", &amp;idade);
+   scanf("%f", &amp;altura);
+   scanf(" %c", &amp;inicial);
+
+   printf("%d %.2f %c", idade, altura, inicial);
+
+}</pre>
+</section>
+
+<section class="card">
+<h2>Questão 8</h2>
+<div class="step">
+<div class="num">8</div>
+<div>Leia um número e informe se é positivo ou negativo.</div>
+</div>
+
+<pre>#include &lt;stdio.h&gt;
+
+int main(){
+
+   int n;
+
+   scanf("%d", &amp;n);
+
+   if(n &gt;= 0)
+      printf("Positivo");
+   else
+      printf("Negativo");
+
+}</pre>
+</section>
+
+<section class="card">
+<h2>Questão 9</h2>
+<div class="step">
+<div class="num">9</div>
+<div>Leia idade e informe se é maior de idade.</div>
+</div>
+
+<pre>#include &lt;stdio.h&gt;
+
+int main(){
+
+   int idade;
+
+   scanf("%d", &amp;idade);
+
+   if(idade &gt;= 18)
+      printf("Maior de idade");
+   else
+      printf("Menor de idade");
+
+}</pre>
+</section>
+
+<section class="card">
+<h2>Questão 10</h2>
+<div class="step">
+<div class="num">10</div>
+<div>Leia dois números e informe o maior ou empate.</div>
+</div>
+
+<pre>#include &lt;stdio.h&gt;
+
+int main(){
+
+   int a,b;
+
+   scanf("%d%d", &amp;a, &amp;b);
+
+   if(a &gt; b)
+      printf("Maior: %d", a);
+   else if(b &gt; a)
+      printf("Maior: %d", b);
+   else
+      printf("Empate");
+
+}</pre>
+</section>
+
+</div>
+
+<footer>
+Nairon S Viana (nairon.viana@ifpi.edu.br). Material introdutório para aulas de Algoritmos e Linguagem C.
+</footer>
+
+</body>
+</html>
