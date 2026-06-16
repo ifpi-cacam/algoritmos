@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aula 20 - Atividade em Laboratório</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+    color:#333;
+    line-height:1.6;
+}
+
+.container{
+    max-width:1100px;
+    margin:30px auto;
+    padding:20px;
+}
+
+header{
+    background:#ffffff;
+    border:1px solid #ddd;
+    padding:25px;
+    margin-bottom:20px;
+}
+
+header h1{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+header p{
+    margin-bottom:8px;
+}
+
+.info{
+    background:#ffffff;
+    border:1px solid #ddd;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.info h2{
+    margin-bottom:10px;
+}
+
+.info ul{
+    margin-left:20px;
+}
+
+.questao{
+    background:#ffffff;
+    border:1px solid #ddd;
+    margin-bottom:20px;
+}
+
+.questao h2{
+    background:#f0f0f0;
+    padding:15px;
+    border-bottom:1px solid #ddd;
+    font-size:20px;
+}
+
+.questao .conteudo{
+    padding:20px;
+}
+
+.questao ul{
+    margin-top:10px;
+    margin-left:25px;
+}
+
+.exemplo{
+    margin-top:15px;
+    background:#fafafa;
+    border-left:4px solid #666;
+    padding:15px;
+    font-family: Consolas, monospace;
+    white-space: pre-line;
+}
+
+footer{
+    text-align:center;
+    margin-top:30px;
+    padding:20px;
+    color:#666;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <h1>Aula 21 - Atividade em Laboratório</h1>
+
+    <p><strong>Curso:</strong> Tecnólogo em ADS - 2026/01</p>
+	<p><strong>Data:</strong> 16/06/2026</p>
+	<p><strong>Professor:</strong> Nairon Viana (<span style="color:tomato;border-bottom: 1px solid tomato;">nairon.viana@ifpi.edu.br<span>)</p>
+	<p><strong>Conteúdo:</strong> Estruturas de Repetição em Linguagem C (2,0pts na próxima avaliação)</p>
+
+    <p>
+        Resolva os problemas abaixo utilizando estruturas de repetição,
+        variáveis, operadores aritméticos e estruturas de decisão quando necessário.
+    </p>
+</header>
+
+<div class="info">
+
+    <h2>Orientações</h2>
+
+    <ul>
+        <li>Desenvolva os programas em Linguagem C.</li>
+        <li>Utilize estruturas de repetição sempre que necessário.</li>
+        <li>Organize o código utilizando nomes de variáveis significativos.</li>
+        <li>Teste os programas antes da entrega.</li>
+        <li>Comente o código quando julgar necessário.</li>
+    </ul>
+
+</div>
+
+<div class="questao">
+
+    <h2>Questão 1 - Juros Compostos</h2>
+
+    <div class="conteudo">
+
+        <p>
+            Em dezembro de 2016, Márcio tomou emprestado o valor de
+            <strong>R$ 1.400,00</strong>.
+        </p>
+
+        <p>
+            A dívida sofre um acréscimo de <strong>4% ao mês</strong>,
+            calculado sobre o saldo acumulado do mês anterior.
+        </p>
+
+        <p>
+            Desenvolva um programa em C que:
+        </p>
+
+        <ul>
+            <li>Calcule a evolução da dívida durante 12 meses;</li>
+            <li>Exiba o saldo atualizado em cada mês;</li>
+            <li>Apresente o valor final da dívida;</li>
+            <li>Apresente o total de juros pagos ao final do período.</li>
+        </ul>
+
+        <div class="exemplo">
+Mês 1 -> R$ ...
+
+Mês 2 -> R$ ...
+
+...
+
+Mês 12 -> R$ ...
+
+Valor Final -> R$ ...
+
+Total de Juros -> R$ ...
+        </div>
+
+    </div>
+
+</div>
+
+<div class="questao">
+
+    <h2>Questão 2 - Controle de Jornada Semanal</h2>
+
+    <div class="conteudo">
+
+        <p>
+            Desenvolva um programa em C para calcular o rendimento semanal
+            de um trabalhador.
+        </p>
+
+        <p>O programa deverá:</p>
+
+        <ul>
+            <li>Receber o valor da hora trabalhada;</li>
+            <li>Receber a quantidade de horas trabalhadas de segunda a sexta;</li>
+            <li>Exibir o valor recebido em cada dia;</li>
+            <li>Exibir o total de horas trabalhadas na semana;</li>
+            <li>Exibir o total recebido ao final da semana.</li>
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="questao">
+
+    <h2>Questão 3 - Análise de Temperaturas</h2>
+
+    <div class="conteudo">
+
+        <p>
+            Desenvolva um programa em C que receba a temperatura média
+            registrada em cada mês do ano.
+        </p>
+
+        <p>
+            Ao final, o programa deverá informar:
+        </p>
+
+        <ul>
+            <li>A média anual de temperatura;</li>
+            <li>A maior temperatura registrada;</li>
+            <li>O mês em que ocorreu a maior temperatura;</li>
+            <li>A menor temperatura registrada;</li>
+            <li>O mês em que ocorreu a menor temperatura.</li>
+        </ul>
+
+        <div class="exemplo">
+Média Anual: 31.2
+
+Maior Temperatura: 38.4
+Mês: Outubro
+
+Menor Temperatura: 24.1
+Mês: Julho
+        </div>
+
+    </div>
+
+</div>
+
+<div class="questao">
+
+    <h2>Questão 4 - Sistema de Eleição</h2>
+
+    <div class="conteudo">
+
+        <p>
+            Três candidatos disputam uma eleição para representante de turma.
+        </p>
+
+        <p>
+            O programa deverá:
+        </p>
+
+        <ul>
+            <li>Receber o nome dos três candidatos;</li>
+            <li>Receber a quantidade de eleitores;</li>
+            <li>Registrar o voto de cada eleitor;</li>
+            <li>Contabilizar votos válidos e nulos.</li>
+        </ul>
+
+        <p>
+            Ao final, exibir:
+        </p>
+
+        <ul>
+            <li>Nome de cada candidato;</li>
+            <li>Total de votos recebidos;</li>
+            <li>Percentual de votos obtido.</li>
+        </ul>
+
+        <p>
+            Além disso:
+        </p>
+
+        <ul>
+            <li>Se os votos nulos ultrapassarem 50% do total de votos, a eleição deverá ser anulada;</li>
+            <li>Caso contrário, o programa deverá identificar o vencedor;</li>
+            <li>Em caso de empate, informar os candidatos empatados.</li>
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="questao">
+
+    <h2>Questão 5 - Desafio: Planejamento de Economia</h2>
+
+    <div class="conteudo">
+
+        <p>
+            João deseja comprar um notebook que custa R$ 4.500,00.
+        </p>
+
+        <p>
+            Atualmente ele possui R$ 500,00 guardados e consegue economizar
+            R$ 250,00 por mês.
+        </p>
+
+        <p>
+            Além disso, todo o dinheiro acumulado rende 1% ao mês.
+        </p>
+
+        <p>
+            Desenvolva um programa em C que simule a evolução da economia de João,
+            mês a mês, até que ele consiga juntar o valor necessário para comprar
+            o notebook.
+        </p>
+
+        <p>
+            O programa deverá mostrar, a cada mês:
+        </p>
+
+        <ul>
+            <li>O número do mês;</li>
+            <li>O valor acumulado até aquele momento.</li>
+        </ul>
+
+        <p>
+            Ao final, informe:
+        </p>
+
+        <ul>
+            <li>Quantos meses foram necessários para atingir a meta;</li>
+            <li>O valor final acumulado;</li>
+            <li>Quanto do valor acumulado corresponde aos rendimentos obtidos.</li>
+        </ul>
+
+        <div class="exemplo">
+Meta: R$ 4500,00
+
+Mes 1 -> R$ 757,50
+Mes 2 -> R$ 1.015,08
+Mes 3 -> R$ 1.272,73
+...
+
+Joao atingiu a meta em 15 meses.
+
+Valor acumulado: R$ 4.612,34
+
+Total obtido com rendimentos: R$ 362,34
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    Aula 20 - Estruturas de Repetição - Linguagem C
+</footer>
+
+</div>
+
+</body>
+</html>
