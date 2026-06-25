@@ -1,0 +1,19 @@
+Aula dia 19/06 - Questões selecionadas respondidas em C
+
+-------------------------------------- RESPONDIDAS EM SALA ------------------------------------------
+
+1. Declarar um vetor e mostrar a soma de seus elementos
+2. Declarar 2 vetores e calcular um 3o com elementos correspondentes à soma dos 2 primeiros
+3. Declarar um vetor e mostrar o maior e o menor de seus elementos
+4. Declarar um vetor e inverter seus elementos
+5. Declarar um vetor e ordenar seus elementos crescente
+6. Declarar um vetor e ordenar seus elementos decrescente
+
+-------------------------------------- PARA OS ALUNOS -----------------------------------------------
+1. Declarar um vetor de inteiros correspondentes às idades, com valores fixos (5 itens). Percorrer o vetor e mostrar quais são maiores que 18.
+
+2. Declarar um vetor de caracteres com 7 elementos, inicializar cada um com nomes de frutas (valores fixos), percorrer o vetor e mostrar a primeira letra de cada fruta
+
+3. Declarar um vetor com 5 valores correspondentes ao salário de um funcionário. Preencher cada posição com valores fixos. Alterar cada posição de salário realizando um aumento de 10% no valor de cada posição. Mostrar antes e depois.
+
+4. Declarar 2 vetores: 1 para armazenar 5 nomes de modelos de veículos e outro para armazenar 5 valores de preços, para cada modelo. Mostrar para cada posição (de 0 a 4) o nome do modelo do veículo e preço da posição correspondente. Os valores são fixos, não precisam ser recebidos via scanf.
