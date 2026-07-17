@@ -1,0 +1,65 @@
+----------- AULA 16/07/2026 ------------
+:::: ATIVIDADES RESOLVIDAS EM SALA :::::
+Questão 1) Faça um programa que leia 20 números inteiros.
+
+Implemente os seguintes módulos:
+
+void lerVetor(int v[])
+int maior(int v[])
+int menor(int v[])
+float media(int v[])
+void imprimirResultado(...)
+
+O main() deve apenas coordenar as chamadas aos módulos.
+
+=================================================================
+
+Questão 2 – Mini Sistema Bancário
+
+Implemente um menu com as opções:
+
+1 - Depositar
+2 - Sacar
+3 - Consultar saldo
+4 - Encerrar
+
+Crie os módulos:
+
+void depositar()
+void sacar()
+void consultarSaldo()
+
+=================================================================
+Questão 3) Operações matemáticas - calculadora modularizada
+
+Contrua um modulo externo para:
+** Criar um arquivo .h com essas funções:
+1) somar 2 numeros e retornar o resultado 
+(função com parametros)
+2) subtrair 2 numeros e retornar o resultado
+(função com parametros)
+3) multiplicar 2 numeros e retornar o resultado
+(função com parametros)
+4) dividir 2 numeros e retornar o resultado
+(função com parametros)
+*** Criar um arquivo .c chamando cada uma das funções
+
+
+
+=================================================================
+Questão 4) - Sistema de cadastro de funcionários 
+--- Sistema de Cadastro Completo de Funcionários:
+Armazene para cada funcionário em um vetor separado
+São 10 funcionários
+Armazene: nome, idade e salário (1 vetor para cada)
+Construa um modulo externo para receber 1 vetor de cada, e:
+1) Inicializar os valores
+2) Mostrar os valores
+3) Mostrar o funcionario de maior salario
+4) Mostrar a media dos salarios
+5) Mostrar a média das idades
+6) Editar um valor de uma posição qualquer
+
+
+
+
